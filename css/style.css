@@ -1,0 +1,550 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+    src: url("fonts/Roboto/Roboto-Bold.ttf") format("ttf");
+    src: url("fonts/Roboto/Roboto-italic.ttf") format("ttf");
+    src: url("fonts/Roboto/Roboto-light.ttf") format("ttf");
+    src: url("fonts/Roboto/Roboto-Medium.ttf") format("ttf");
+    src: url("fonts/Roboto/Roboto-Thin.ttf") format("ttf");
+    src: url("fonts/Roboto/Roboto-Black.ttf") format("ttf");
+}
+
+
+:root {
+    --maincolor: #2541B2;
+    --secondary: #788cfd;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: #222;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Шапка сайта */
+
+.header-container {
+    background-color: var(--maincolor);
+    color: #fff;
+    transition: display 0.3s;
+}
+
+header {
+    padding: 15px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header ul {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+header li {
+    padding: 12px;
+}
+
+header a {
+    color: #eee;
+}
+
+header a:hover {
+    color: #c1caff;
+    border-bottom: 1px solid white;
+}
+
+/* Меню для низкого разрешения */
+.navbar .links {
+    display: none;
+}
+
+.icon {
+    display: none;
+    border: none;
+    text-align: right;
+    padding: 5px 10px;
+    margin-right: 4px;
+}
+
+.icon:hover {
+    border: none;
+}
+
+.icon:active {
+    border: none;
+}
+
+
+.links a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 17px;
+    display: block;
+}
+
+.links a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Слоган сайта */
+.tagline {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/airbus.jpg");
+    background-position: right 50% bottom 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1d4279;
+    height: 400px;
+}
+
+.tagline h2 {
+    color: white;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 6vh;
+    padding-top: 100px;
+}
+
+.tagline::before,
+.tagline::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    background: white;
+    transform: skewY(-3deg);
+}
+
+
+/* Секция бронирования */
+.book {
+    margin-top: 85px;
+    width: 100%;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+
+.book::before,
+.book::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background: white;
+    transform: skewY(-3deg);
+    z-index: 100;
+}
+
+.works {
+    justify-content: space-between;
+}
+
+.book h2 {
+    text-align: center;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 75px;
+}
+
+.book h3 {
+    height: 115px;
+    font-size: 1.5em;
+    color: #444;
+    text-align: center;
+}
+
+.book i {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--secondary);
+    font-size: 16vh;
+}
+
+/* Секция доверия компании */
+.company-trust {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.trust-showcase {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/interior.jpg");
+    background-position: right 50% bottom 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1d4279;
+    height: 400px;
+}
+
+.trust-h2 {
+    width: 100%;
+    padding-top: 150px;
+    color: white;
+    font-size: 7vh;
+    text-align: center;
+}
+
+.trust-showcase h3 {
+    width: 100%;
+    color: white;
+    font-size: 4vh;
+    text-align: center;
+}
+
+/* Поиск */
+
+.search-form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/airplane2.jpg");
+    background-position: right 50% bottom 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1d4279;
+    height: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+
+.search-form h2 {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    padding-right: 25px;
+}
+
+.search-form-padding {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.search-form .container .card {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search-form input {
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-right: 5px;
+    outline: none;
+    background-color: white;
+}
+
+.search-form input:focus {
+    border-bottom: 1px solid var(--maincolor);
+}
+
+.search-form input[type="submit"] {
+    border: none;
+    color: white;
+    background-color: var(--maincolor);
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 10px
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #788cfd;
+}
+
+.label-name {
+    width: 45%;
+    text-align: left;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Акции */
+.offers h3 {
+    font-size: 5vh;
+    margin-bottom: 10px;
+}
+
+.offer h3,
+.offer p {
+    padding-top: 10px;
+}
+
+.offers {
+    text-align: center;
+}
+
+.offers img {
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+    border: none;
+    color: white;
+    outline: none;
+    background-color: var(--maincolor);
+    width: 15%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #788cfd;
+}
+
+/* Закрытые акции */
+.closed-off h3 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.closed-off form {
+    margin: 20px auto;
+}
+
+.closed-off input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding: 10px 5px;
+    margin: 0 10px;
+}
+
+.closed-off input:focus {
+    border-bottom: 1px solid var(--maincolor);
+}
+
+.closed-off input[type="submit"] {
+    border: none;
+    color: white;
+    background-color: var(--maincolor);
+    width: 25%;
+}
+
+.closed-off input[type="submit"]:hover {
+    background-color: var(--secondary);
+}
+
+.closed-off .form-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Подвал */
+footer {
+    width: 100%;
+    background-color: var(--maincolor);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* Медиа запросы */
+@media (max-width: 920px) {
+    .tagline h2 {
+        padding-top: 40px;
+        font-size: 5vh;
+    }
+
+    .trust-h2 {
+        padding-top: 150px;
+        font-size: 5vh;
+    }
+
+    .search-form .container .flex {
+        flex-direction: column;
+    }
+
+    .search-form {
+        height: 650px;
+    }
+
+
+    .search-form .card {
+        width: 75%;
+        margin-top: 15px;
+    }
+
+    .company-trust {
+        margin: 70px auto;
+    }
+
+    .company-trust .card {
+        margin: 10px auto;
+    }
+
+    .company-trust .card p {
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .navbar ul {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .book i {
+        font-size: 10vh;
+    }
+
+    .book h3 {
+        font-size: 1.5em;
+    }
+
+    .search-form h2 {
+        font-size: 3.5vh;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .tagline h2 {
+        font-size: 4vh;
+    }
+
+    .closed-off .form-container {
+        width: 80%;
+    }
+
+    .offers .right,
+    .offers .left {
+        float: none;
+    }
+
+    .offers h2,
+    .offers p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .offer {
+        margin-bottom: 10px;
+    }
+
+    .offer img {
+        width: 75%;
+    }
+
+    .offer button {
+        width: 35%;
+    }
+
+    .label-name {
+        font-size: 2.5vh;
+    }
+
+
+}
+
+@media (max-width: 520px) {
+    .works {
+        flex-direction: column;
+    }
+
+    .search-form .card {
+        width: 75%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .search-form h2 {
+        font-size: 4vh;
+    }
+
+    .works div {
+        margin-bottom: 20px;
+    }
+
+    .book h3 {
+        height: 80px;
+    }
+
+    .trust-h2 {
+        padding-top: 140px;
+        font-size: 4.5vh;
+    }
+
+    .trust-showcase h3 {
+        font-size: 2.5vh;
+    }
+
+    .closed-off .form-container {
+        width: 100%;
+    }
+
+    .offers h2,
+    .offers p {
+        width: 90%;
+    }
+
+    .label-name {
+        font-size: 2vh;
+    }
+
+}
+
+@media (max-width: 330px) {
+    .book h2 {
+        font-size: 5vh;
+        margin-bottom: 30px;
+    }
+
+    h3.headline {
+        font-size: 3.5vh;
+    }
+
+    .search-form input[type="submit"] {
+        width: 50%;
+    }
+}

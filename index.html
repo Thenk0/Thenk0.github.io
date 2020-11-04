@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlightPool | Мы сближаем города, вы - живете там, где хотите.</title>
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/webfonts/all.css">
+</head>
+
+<body>
+    <!-- Меню навигации -->
+    <div class="header-container">
+        <header class="flex container">
+            <h1>FlightPool</h1>
+            <div class="navbar">
+                <ul class="flex">
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Поиск</a></li>
+                    <li><a href="#">Регистрация на рейс</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                </ul>
+                <!-- Меню для низкого разрешения -->
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
+                <div class="links" id="burger-links">
+                    <a href="#">Акции</a>
+                    <a href="#">Поиск</a>
+                    <a href="#">Регистрация на рейс</a>
+                    <a href="#">Личный кабинет</a>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+    <!-- Слоган компании -->
+
+    <section class="tagline">
+        <h2>Мы сближаем города, вы - живете там, где хотите.</h2>
+    </section>
+
+    <!-- Секция бронирования -->
+    <section class="book">
+        <h2>Как работает наш сервис? </h2>
+        <div class="flex works container">
+            <div>
+                <h3 class="headline">Выбираете удобное время для перелёта.</h3>
+                <i class="fas fa-clock icon-size"></i>
+            </div>
+            <div>
+                <h3 class="headline">Накапливаете больше 50% бронирований на рейс.</h3>
+                <i class="fas fa-sort-amount-up icon-size"></i>
+            </div>
+            <div>
+                <h3 class="headline">Получаете снижение стоимости.</h3>
+                <i class="fas fa-check icon-size"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция доверия компании -->
+    <div class="trust-showcase">
+        <h2 class="trust-h2">Вы можете нам доверять!</h2>
+        <h3>И вот почему</h3>
+    </div>
+    <section class="company-trust container grid grid-3">
+        <div class="card">
+            <img src="./images/interior2.jpeg" height="250">
+            <h2>Возврат средств</h2>
+            <p>Если вы не довольны качеством обслуживания, мы всегда готовы вернуть средства</p>
+        </div>
+        <div class="card">
+            <img src="./images/roadtrip.jpg" height="250">
+            <h2>Удобность</h2>
+            <p>Выбирайте время полёта, когда угодно, где угодно.</p>
+        </div>
+        <div class="card">
+            <img src="./images/airplane.jpg" height="250">
+            <h2>Скорость</h2>
+            <p>Мы обещаем, что полёт найдется быстро и без каких либо проблем.</p>
+        </div>
+
+    </section>
+    <!-- Секция поиска -->
+    <section class="search-form">
+        <div class="container h-100">
+            <div class="flex flex-end flex-center-y h-100 h-100">
+                <h2 class="w-40">Готовы к вылету? Мы найдем полёт специально для вас!</h2>
+                <div class="card rounded w-50 right search-form-padding">
+                    <form class="flex flex-column w-100">
+                        <div class="form-container">
+                            <input class=" w-50" type="text" placeholder="Город или аэропорт отправления">
+                            <h3 class="label-name">Откуда</h3>
+                        </div>
+                        <div class="form-container">
+                            <input class=" w-50" type="text" placeholder="Город или аэропорт отправления">
+                            <h3 class="label-name">Куда</h3>
+                        </div>
+                        <div class="form-container">
+                            <input class=" w-50" type="date">
+                            <h3 class="label-name">Дата вылета туда</h3>
+                        </div>
+                        <div class="form-container">
+                            <input class=" w-50" type="date">
+                            <h3 class="label-name">Дата вылета обратно</h3>
+                        </div>
+                        <div class="form-container">
+                            <div class="w-50 flex">
+                                <input class=" w-90" type="range" value="1" min="1" max="8" step="1" id="range"
+                                    oninput="changeValue()">
+                                <p id="pass-amount">1</p>
+                            </div>
+                            <h3 class="label-name">Количество пассажиров</h3>
+                            </input>
+                        </div>
+                        <input type="submit" placeholder="Найти билеты" value="Найти">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Акции -->
+    <section class="offers">
+        <h3 class="w-100 mw-auto text-center">Акции</h3>
+        <div class="offer container float-clear">
+            <img src="images/promotions/promotion1.jpg" alt="" class="w-50 right">
+            <h2>Верните и Обменяйте Ваши Билеты</h2>
+            <p>
+                Пандемия изменила планы путешествиников, но мы знаем, что она не продлится вечно.
+                Как только это всё закончится, мы продолжим исследовать мир так же, как привыкли.
+                Специальные правила, разработанные для этой сложной ситуации помогут вам отменить полёт или
+                перенести его на другое время.
+            </p>
+            <button>Узнать больше</button>
+        </div>
+        <div class="offer container float-clear">
+            <img src="images/promotions/promotion2.jpg" alt="" class=" w-50 left">
+            <h2>Лучшие предложения</h2>
+            <p>
+                Увидеть улицы, которые познали так много. Обнять своих родных и оглянуться назад, чтобы увидеть через
+                что вы уже прошли. И думать о новых мечтах, которые будут настолько оссобенными
+            </p>
+            <button>Узнать больше</button>
+        </div>
+        <div class="offer container float-clear">
+            <img src="images/promotions/promotion3.jpg" alt="" class="w-50 right">
+            <h2>Видиться чаще</h2>
+            <p>
+                С начала Января, мы были заняты увеличением возможных полётов в России, чтобы вы могли видиться с
+                родными чаще. Выберите нашу компанию, чтобы долететь туда, где вас всегда ждут.
+            </p>
+            <button>Узнать больше</button>
+        </div>
+        <div class="offer container float-clear">
+            <img src="images/promotions/promotion4.jpg" alt="" class=" w-50 left">
+            <h2>Всё снова доступно</h2>
+            <p>
+                С 10 Августа, мы возобновили полёты в Турцию. Полёты с Москвы до Антальи будут проходить 2 раза в день,
+                и
+                полёты по маршруту Москва-Даламан будут проходить от 3 до 7 раз в неделю.
+            </p>
+            <button>Узнать больше</button>
+        </div>
+    </section>
+    <br class="float-clear">
+    <!-- Форма подписки на закрытые акции -->
+    <section class="closed-off float-clear">
+        <h3>Хотите подписаться на закрытые акции? Это просто!</h3>
+        <form>
+            <div class="form-container">
+                <input type="email" placeholder="Email">
+                <input type="submit" placeholder="Подписаться" value="Подписаться">
+            </div>
+        </form>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <h2 class="test-0-phone">
+            Телефон "8 (800) 100-10-10"
+        </h2>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
